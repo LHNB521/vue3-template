@@ -1,6 +1,6 @@
-# screen-template
+# vue3-template
 
-可视化大屏模板：基于Vu3+typescript+Vite
+模板：基于Vu3+typescript+Vite
 
 ## 开发环境和工具
 
