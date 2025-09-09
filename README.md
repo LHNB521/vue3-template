@@ -1,91 +1,91 @@
-# Vue3 Template
+# Vue3 模板
 
-A modern Vue3 project template with TypeScript, Element Plus, Pinia, and more.
+一个现代化的 Vue3 项目模板，集成了 TypeScript、Element Plus、Pinia 等技术。
 
-## Features
+## 特性
 
-- ⚡️ **Vue 3** - Composition API, `<script setup>` syntax
-- 🔥 **TypeScript** - Type safety and better DX
-- 🎨 **Element Plus** - Rich UI component library
-- 🍍 **Pinia** - Modern state management
-- 📡 **Axios** - HTTP client with interceptors
-- 📅 **Day.js** - Date manipulation library
-- 📊 **ECharts** - Powerful charting library
-- 🎯 **Tailwind CSS** - Utility-first CSS framework
-- ⚡️ **Vite** - Fast build tool
-- 📏 **ESLint** - Code linting
-- 💅 **Prettier** - Code formatting
-- 🎨 **Sass** - CSS preprocessor
+- ⚡️ **Vue 3** - 组合式 API，`<script setup>` 语法
+- 🔥 **TypeScript** - 类型安全和更好的开发体验
+- 🎨 **Element Plus** - 丰富的 UI 组件库
+- 🍍 **Pinia** - 现代化状态管理
+- 📡 **Axios** - 带拦截器的 HTTP 客户端
+- 📅 **Day.js** - 日期处理库
+- 📊 **ECharts** - 强大的图表库
+- 🎯 **Tailwind CSS** - 实用优先的 CSS 框架
+- ⚡️ **Vite** - 快速的构建工具
+- 📏 **ESLint** - 代码检查
+- 💅 **Prettier** - 代码格式化
+- 🎨 **Sass** - CSS 预处理器
 
-## Project Structure
+## 项目结构
 
 \`\`\`
 src/
-├── components/          # Reusable components
-├── views/              # Page components
-├── stores/             # Pinia stores
-├── router/             # Vue Router configuration
-├── utils/              # Utility functions
-├── types/              # TypeScript type definitions
-├── styles/             # Global styles and variables
-└── main.ts             # Application entry point
+├── components/          # 可复用组件
+├── views/              # 页面组件
+├── stores/             # Pinia 状态管理
+├── router/             # Vue Router 配置
+├── utils/              # 工具函数
+├── types/              # TypeScript 类型定义
+├── styles/             # 全局样式和变量
+└── main.ts             # 应用入口点
 \`\`\`
 
-## Getting Started
+## 开始使用
 
-### Prerequisites
+### 环境要求
 
-- Node.js 16+ 
-- npm or yarn or pnpm
+- Node.js 16+
+- npm 或 yarn 或 pnpm
 
-### Installation
+### 安装
 
-1. Clone the repository
+1. 克隆仓库
 \`\`\`bash
 git clone <repository-url>
 cd vue3-template
 \`\`\`
 
-2. Install dependencies
+2. 安装依赖
 \`\`\`bash
 npm install
-# or
+# 或
 yarn install
-# or
+# 或
 pnpm install
 \`\`\`
 
-3. Start development server
+3. 启动开发服务器
 \`\`\`bash
 npm run dev
-# or
+# 或
 yarn dev
-# or
+# 或
 pnpm dev
 \`\`\`
 
-4. Build for production
+4. 构建生产版本
 \`\`\`bash
 npm run build
-# or
+# 或
 yarn build
-# or
+# 或
 pnpm build
 \`\`\`
 
-## Scripts
+## 脚本命令
 
-- `dev` - Start development server
-- `build` - Build for production
-- `preview` - Preview production build
-- `lint` - Run ESLint
-- `format` - Format code with Prettier
+- `dev` - 启动开发服务器
+- `build` - 构建生产版本
+- `preview` - 预览生产构建
+- `lint` - 运行 ESLint 检查
+- `format` - 使用 Prettier 格式化代码
 
-## Configuration
+## 配置
 
-### Environment Variables
+### 环境变量
 
-Copy `.env.example` to `.env` and configure your environment variables:
+复制 `.env.example` 到 `.env` 并配置你的环境变量：
 
 \`\`\`bash
 cp .env.example .env
@@ -93,67 +93,67 @@ cp .env.example .env
 
 ### Tailwind CSS
 
-Tailwind CSS is configured in `tailwind.config.js`. You can customize colors, spacing, and other design tokens.
+Tailwind CSS 在 `tailwind.config.js` 中配置。你可以自定义颜色、间距和其他设计标记。
 
 ### Element Plus
 
-Element Plus is auto-imported using `unplugin-vue-components`. You can use components directly without manual imports.
+Element Plus 使用 `unplugin-vue-components` 自动导入。你可以直接使用组件，无需手动导入。
 
 ### ECharts
 
-ECharts is integrated with `vue-echarts`. Import only the components you need to keep bundle size small.
+ECharts 通过 `vue-echarts` 集成。仅导入你需要的组件以保持包体积小。
 
-## Development Guidelines
+## 开发指南
 
-### Code Style
+### 代码风格
 
-- Use TypeScript for type safety
-- Follow Vue 3 Composition API patterns
-- Use `<script setup>` syntax
-- Prefer composition over options API
-- Use Pinia for state management
-- Follow ESLint and Prettier rules
+- 使用 TypeScript 保证类型安全
+- 遵循 Vue 3 组合式 API 模式
+- 使用 `<script setup>` 语法
+- 优先使用组合式 API 而不是选项式 API
+- 使用 Pinia 进行状态管理
+- 遵循 ESLint 和 Prettier 规则
 
-### Component Structure
+### 组件结构
 
 \`\`\`vue
 <template>
-  <!-- Template content -->
+  <!-- 模板内容 -->
 </template>
 
 <script setup lang="ts">
-// Imports
-// Props/Emits interfaces
-// Reactive data
-// Computed properties
-// Methods
-// Lifecycle hooks
+// 导入
+// Props/Emits 接口
+// 响应式数据
+// 计算属性
+// 方法
+// 生命周期钩子
 </script>
 
 <style lang="scss" scoped>
-/* Component styles */
+/* 组件样式 */
 </style>
 \`\`\`
 
-### State Management
+### 状态管理
 
-Use Pinia stores for global state:
+使用 Pinia stores 进行全局状态管理：
 
 \`\`\`typescript
 // stores/example.ts
 export const useExampleStore = defineStore('example', () => {
   const state = ref(initialValue)
-  
+
   const getter = computed(() => state.value)
-  
+
   const action = () => {
-    // Action logic
+    // 动作逻辑
   }
-  
+
   return { state, getter, action }
 })
 \`\`\`
 
-## License
+## 许可证
 
-MIT License
+MIT 许可证
