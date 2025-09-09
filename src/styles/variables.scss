@@ -1,0 +1,33 @@
+// Colors
+$primary-color: #3b82f6 !default;
+$secondary-color: #6b7280 !default;
+$success-color: #10b981 !default;
+$warning-color: #f59e0b !default;
+$error-color: #ef4444 !default;
+
+// Spacing
+$spacing-xs: 0.25rem !default;
+$spacing-sm: 0.5rem !default;
+$spacing-md: 1rem !default;
+$spacing-lg: 1.5rem !default;
+$spacing-xl: 2rem !default;
+
+// Breakpoints
+$breakpoint-sm: 640px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 1024px !default;
+$breakpoint-xl: 1280px !default;
+
+// Typography
+$font-size-xs: 0.75rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-base: 1rem !default;
+$font-size-lg: 1.125rem !default;
+$font-size-xl: 1.25rem !default;
+$font-size-2xl: 1.5rem !default;
+$font-size-3xl: 1.875rem !default;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !default;
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !default;
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !default;
