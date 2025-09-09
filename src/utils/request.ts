@@ -1,5 +1,5 @@
 import axios from "axios"
-import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios"
+import type { AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from "axios"
 import { ElMessage } from "element-plus"
 
 const service: AxiosInstance = axios.create({
@@ -18,14 +18,11 @@ const useUserStore = () => {
 }
 
 service.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
+  (config: InternalAxiosRequestConfig) => {
     const userStore = useUserStore()
 
     if (userStore.token) {
-      config.headers = {
-        ...config.headers,
-        Authorization: `Bearer ${userStore.token}`,
-      }
+      config.headers.set('Authorization', `Bearer ${userStore.token}`)
     }
 
     return config
@@ -53,7 +50,6 @@ service.interceptors.response.use(
     if (error.response?.status === 401) {
       const userStore = useUserStore()
       userStore.logout()
-      ElMessage.error("Login expired, please login again")
     } else {
       ElMessage.error(error.message || "Network error")
     }
