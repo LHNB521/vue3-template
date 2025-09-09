@@ -17,6 +17,11 @@ const routes: RouteRecordRaw[] = [
     name: "Charts",
     component: () => import("@/views/Charts.vue"),
   },
+  {
+    path: "/cache-demo",
+    name: "CacheDemo",
+    component: () => import("@/views/CacheDemo.vue"),
+  },
 ]
 
 const router = createRouter({

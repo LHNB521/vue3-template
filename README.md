@@ -9,6 +9,7 @@
 - 🎨 **Element Plus** - 丰富的 UI 组件库
 - 🍍 **Pinia** - 现代化状态管理
 - 📡 **Axios** - 带拦截器的 HTTP 客户端
+- 💾 **智能缓存** - 基于 localStorage 的请求缓存系统
 - 📅 **Day.js** - 日期处理库
 - 📊 **ECharts** - 强大的图表库
 - 🎯 **Tailwind CSS** - 实用优先的 CSS 框架
@@ -102,6 +103,46 @@ Element Plus 使用 `unplugin-vue-components` 自动导入。你可以直接使�
 ### ECharts
 
 ECharts 通过 `vue-echarts` 集成。仅导入你需要的组件以保持包体积小。
+
+### 智能缓存系统
+
+项目集成了完整的缓存解决方案，支持多种缓存策略和自动过期管理。
+
+#### 缓存特性
+
+- 🚀 **多种缓存策略**: 缓存优先、网络优先、仅缓存、仅网络、过期重新验证
+- ⏰ **自动过期管理**: 支持 TTL 设置和自动清理过期缓存
+- 🔄 **版本控制**: 支持缓存版本管理，便于缓存失效
+- 📊 **统计监控**: 提供缓存命中率、大小等统计信息
+- 🛠️ **灵活配置**: 支持全局和单个请求的缓存配置
+
+#### 基本使用
+
+\`\`\`typescript
+import { cachedGet, cachedPost } from '@/utils/request'
+import { CacheStrategy } from '@/types/cache'
+
+// 使用缓存优先策略获取数据
+const userData = await cachedGet('/api/users', { page: 1 }, {
+  strategy: CacheStrategy.CACHE_FIRST,
+  ttl: 5 * 60 * 1000, // 5分钟缓存
+  version: '1.0'
+})
+
+// 使用过期重新验证策略
+const config = await cachedGet('/api/config', undefined, {
+  strategy: CacheStrategy.STALE_WHILE_REVALIDATE,
+  ttl: 30 * 60 * 1000 // 30分钟缓存
+})
+\`\`\`
+
+#### 缓存策略
+
+- **CACHE_FIRST**: 优先使用缓存，缓存失效时发起请求
+- **NETWORK_FIRST**: 优先发起请求，请求失败时使用缓存
+- **CACHE_ONLY**: 仅使用缓存，不发起请求
+- **NETWORK_ONLY**: 仅发起请求，不使用缓存
+- **STALE_WHILE_REVALIDATE**: 返回缓存数据，同时在后台更新缓存
 
 ## 开发指南
 

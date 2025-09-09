@@ -64,6 +64,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Dashboard', href: '/dashboard' },
   { name: 'Charts', href: '/charts' },
+  { name: 'Cache Demo', href: '/cache-demo' },
 ]
 
 const handleToggleTheme = () => {
